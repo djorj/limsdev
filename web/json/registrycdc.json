@@ -1,0 +1,483 @@
+{
+    "name": "registrycdc",
+    "parts": [
+        {
+            "name": "registrycdchuman",
+            "title": "ადამიანი",
+            "icons": ["fa fa-user fa-5x"],
+            "iconsmall": ["fa fa-user"],
+            "addfile": "patientdialog",
+            "orderfile": "orderdialogcdc",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "პაციენტი", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "left", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "left", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "onSelectRow": "if(id == 2){ $('#sendorder').hide(); $('#getorder').show(); } else if(id == 1){ $('#sendorder').show(); $('#getorder').hide();}",
+            "sampledata": [
+                {
+                    "id": 1,
+                    "contr": "მედი ქლაბი",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "დადასტურებული"
+                },
+                {
+                    "id": 2,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 3,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 4,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 5,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 6,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 7,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 8,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 9,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 10,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 11,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                },
+                {
+                    "id": 12,
+                    "contr": "NCDC",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "გამოგზავნილი"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addpatient",
+                    "icon": "fa fa-plus",
+                    "caption": "დამატება",
+                    "function": "addPatient(0,'patientdialog');"
+                },
+                {
+                    "id": "addorder",
+                    "icon": "fa fa-list-alt",
+                    "caption": "შეკვეთა",
+                    "function": "addOrder(jQuery('#reestr0').jqGrid('getGridParam','selrow'),'orderdialogcdc');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr0').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr0').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        },
+        {
+            "name": "registrycdcenv",
+            "title": "გარემო",
+            "icons": ["fa fa-leaf fa-5x"],
+            "iconsmall": ["fa fa-leaf"],
+            "addfile": "envdialog",
+            "orderfile": "orderdialogcdcenv",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "საკვლევი ობიექტი", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "left", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "left", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "sampledata": [
+                {
+                    "contr": "მედი ქლაბი",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "დადასტურებული"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addpatient",
+                    "icon": "fa fa-plus",
+                    "caption": "დამატება",
+                    "function": "addPatient(0,'envdialog');"
+                },
+                {
+                    "id": "addorder",
+                    "icon": "fa fa-list-alt",
+                    "caption": "შეკვეთა",
+                    "function": "addOrder(jQuery('#reestr1').jqGrid('getGridParam','selrow'),'orderdialogcdcenv');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr1').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr1').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        },
+        {
+            "name": "registrycdcother",
+            "title": "სხვა",
+            "icons": ["fa fa-lemon-o fa-5x"],
+            "iconsmall": ["fa fa-lemon-o"],
+            "addfile": "otherdialog",
+            "orderfile": "orderdialogcdcother",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "საკვლევი ობიექტი", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "left", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "left", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "sampledata": [
+                {
+                    "contr": "შპს „ანიოსი“",
+                    "pacient": "„SOLUSCOPE GTA“ LC17E00086",
+                    "type": "სადეზინფექციო ხსნარი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "მიკროორგანიზმის კვლევა",
+                    "count": "1",
+                    "status": "დადასტურებული"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addpatient",
+                    "icon": "fa fa-plus",
+                    "caption": "დამატება",
+                    "function": "addPatient(0,'otherdialog');"
+                },
+                {
+                    "id": "addorder",
+                    "icon": "fa fa-list-alt",
+                    "caption": "შეკვეთა",
+                    "function": "addOrder(jQuery('#reestr2').jqGrid('getGridParam','selrow'),'orderdialogcdcother');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr2').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr2').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        },
+        {
+            "name": "registrycdchumang",
+            "title": "ადამიანი ჯგუფური",
+            "icons": ["fa fa-group fa-5x"],
+            "iconsmall": ["fa fa-group"],
+            "addfile": "patientdialogg",
+            "orderfile": "orderdialogcdcg",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "კონტაქტ. რაოდ.", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "right", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "right", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "onSelectRow": " if(id > 0){ $('#addorder').hide(); $('#editorder').show(); } else { $('#addorder').show(); $('#editorder').hide(); }",
+            "sampledata": [
+                {
+                    "contr": "მედი ქლაბი",
+                    "pacient": "43",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "43",
+                    "status": "დადასტურებული"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addorder",
+                    "icon": "fa fa-plus",
+                    "caption": "შეკვეთა",
+                    "function": "addOrderg(jQuery('#reestr3').jqGrid('getGridParam','selrow'),'orderdialogcdcg');"
+                },
+                {
+                    "id": "editorder",
+                    "icon": "fa fa-pencil",
+                    "caption": "შეკვეთა",
+                    "function": "addOrderg(jQuery('#reestr3').jqGrid('getGridParam','selrow'),'orderdialogcdcg');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr3').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr3').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        },
+        {
+            "name": "registrycdcenvg",
+            "title": "გარემო ჯგუფური",
+            "icons": ["fa fa-leaf fa-5x","fa fa-leaf fa-5x"],
+            "iconsmall": ["fa fa-leaf","fa fa-leaf"],
+            "addfile": "envdialog",
+            "orderfile": "orderdialogcdcenvg",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "საკვლევი ობიექტი", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "left", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "left", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "sampledata": [
+                {
+                    "contr": "მედი ქლაბი",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "დადასტურებული"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addorder",
+                    "icon": "fa fa-list-alt",
+                    "caption": "შეკვეთა",
+                    "function": "addOrder(jQuery('#reestr4').jqGrid('getGridParam','selrow'),'orderdialogcdcenvg');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr4').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr4').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        },
+        {
+            "name": "registrycdcotherg",
+            "title": "სხვა ჯგუფური",
+            "icons": ["fa fa-lemon-o fa-5x","fa fa-lemon-o fa-5x"],
+            "iconsmall": ["fa fa-lemon-o","fa fa-lemon-o"],
+            "addfile": "patientdialogotherg",
+            "orderfile": "orderdialogcdcotherg",
+            "sendfile": "sendorderdialogcdc",
+            "colnames": [
+                "დამკვეთი", "საკვლევი ობიექტი", "ნიმუშ(ებ)ის ტიპი", "გამომგზავნი დაწესებულება", "მისამართი", "მოთხოვნილი გამოკვლევა", "ნიმუშების რაოდენობა", "სტატუსი"
+            ],
+            "colmodel": [
+                {"name": "contr", "index": "contr", "editable": true, "align": "left", "width": 100},
+                {"name": "pacient", "index": "pacient", "editable": true, "align": "left", "width": 100},
+                {"name": "type", "index": "type", "editable": true, "align": "left", "width": 100},
+                {"name": "sender", "index": "sender", "editable": true, "align": "left", "width": 100},
+                {"name": "address", "index": "address", "editable": true, "align": "left", "width": 100},
+                {"name": "research", "index": "research", "editable": true, "align": "left", "width": 100},
+                {"name": "count", "index": "count", "editable": true, "align": "left", "width": 100},
+                {"name": "status", "index": "status", "editable": true, "align": "left", "width": 100}
+            ],
+            "sampledata": [
+                {
+                    "contr": "მედი ქლაბი",
+                    "pacient": "გიორგი გიორგაძე",
+                    "type": "წყლულის შიგთავსი",
+                    "sender": "ქუთაისის ზდლ",
+                    "address": "",
+                    "research": "ბაქტერიოლოგიური, მიკრობიოლოგიური",
+                    "count": "1",
+                    "status": "დადასტურებული"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": "addpatient",
+                    "icon": "fa fa-plus",
+                    "caption": "დამატება",
+                    "function": "addPatient(0,'patientdialogotherg');"
+                },
+                {
+                    "id": "addorder",
+                    "icon": "fa-list-alt",
+                    "caption": "შეკვეთა",
+                    "function": "addOrder(jQuery('#reestr5').jqGrid('getGridParam','selrow'),'orderdialogcdcotherg');"
+                },
+                {
+                    "id": "sendorder",
+                    "icon": "fa fa-send",
+                    "caption": "გაგზავნა",
+                    "function": "sendOrder(jQuery('#reestr5').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                },
+                {
+                    "id": "getorder",
+                    "icon": "fa fa-level-down",
+                    "caption": "მიღება",
+                    "function": "getOrder(jQuery('#reestr5').jqGrid('getGridParam','selrow'),'sendorderdialogcdc');"
+                }
+            ]
+        }
+    ]
+}

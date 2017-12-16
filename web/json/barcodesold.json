@@ -1,0 +1,284 @@
+{
+    "name": "barcodes",
+    "types":[
+        {
+            "category": "General 1D",
+            "codes": [
+                {
+                    "name": "Interleaved 2 of 5",
+                    "code": "intl2of5",
+                    "height": 15,
+                    "module-width": 0.21,
+                    "wide-factor": 3,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "display-checksum": "false"
+                    }
+                },
+                {
+                    "name": "ITF-14",
+                    "code": "itf-14",
+                    "height": 32,
+                    "module-width": 1.106,
+                    "wide-factor": 2.5,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "bearer-bar-width": 4.8,
+                    "bearer-box": true,
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "display-checksum": "true"
+                    }
+                },
+                {
+                    "name":"Codabar",
+                    "names": ["USD-4", "NW-7", "2 of 7 code"],
+                    "code": "codabar",
+                    "height": 15,
+                    "module-width": 0.21,
+                    "wide-factor": 3,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "display-checksum": "false"
+                    }
+                },
+                {
+                    "name":"Code 39",
+                    "names":["UCC/EAN-128", "GS1-128"],
+                    "code": "code39",
+                    "height": 15,
+                    "module-width": 0.19,
+                    "wide-factor": 2.5,
+                    "interchar-gap-width": 1,
+                    "extended-charset": false,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "display-checksum": "false"
+                    }
+                },
+                {
+                    "name":"Code 128",
+                    "code": "code128",
+                    "module-width": 0.21,
+                    "codesets": "ABC",
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                }
+            ]
+        },
+        {
+            "category": "UPC/EAN",
+            "codes": [
+                {
+                    "name":"UPC-A",
+                    "code": "upc-a",
+                    "height": 15,
+                    "module-width": 0.33,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                },
+                {
+                    "name":"UPC-E",
+                    "code": "upc-e",
+                    "height": 15,
+                    "module-width": 0.33,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                },
+                {
+                    "name":"EAN-13",
+                    "code": "ean-13",
+                    "height": 15,
+                    "module-width": 0.33,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                },
+                {
+                    "name":"EAN-8",
+                    "code": "ean-8",
+                    "height": 15,
+                    "module-width": 0.33,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                },
+                {
+                    "name":"EAN-128",
+                    "names":["UCC/EAN-128", "GS1-128"],
+                    "code": "ean-128",
+                    "height": 15,
+                    "module-width": 0.21,
+                    "check-digit-marker": "&#x00f0",
+                    "group-separator": "&#x00f1",
+                    "template": "",
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 10
+                    },
+                    "checksum": "auto",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "omit-brackets": false
+                    }
+                }
+            ]
+        },
+        {
+            "category": "Postal",
+            "codes": [
+                {
+                    "name":"POSTNET",
+                    "code": "postnet",
+                    "height": 15,
+                    "module-width": 0.02,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text":10
+                    },
+                    "checksum": "auto",
+                    "interchar-gap-width": 0.026,
+                    "tall-bar-height": 0.125,
+                    "short-bar-height": 0.050,
+                    "baseline-alignment": "bottom",
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt",
+                        "display-checksum": false
+                    }
+                },
+                {
+                    "name":"Royal Mail Customer Barcode (4-State)",
+                    "code": "royal-mail-cbc",
+                    "module-width": 0.53,
+                    "track-height": 1.25,
+                    "ascender-height": 1.25,
+                    "interchar-gap-width": 1,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text":10
+                    },
+                    "checksum": "auto"
+                },
+                {
+                    "name":"USPS Intelligent Mail (4-State Customer Barcode)",
+                    "code": "usps4cb",
+                    "validchars": "0-9",
+                    "module-width": 0.02,
+                    "track-height": 0.05,
+                    "ascender-height": 0.05,
+                    "interchar-gap-width": 0.025,
+                    "vertical-quiet-zone": 0.028,
+                    "human-readable": {
+                        "placement": "bottom",
+                        "font-name": "Helvetica",
+                        "font-size": "8pt"
+                    }
+                }
+            ]
+        },
+        {
+            "category": "2D",
+            "codes": [
+                {
+                    "name":"PDF417",
+                    "names": ["ISO/IEC 15438:2001(E)"],
+                    "code": "pdf417",
+                    "module-width": 0.352777,
+                    "row-height": 3,
+                    "columns": 2,
+                    "min-columns": 2,
+                    "max-columns": 2,
+                    "min-rows": 3,
+                    "max-rows": 90,
+                    "ec-level": 0,
+                    "quiet-zone": {
+                      "enabled": true,
+                      "text": 2
+                    },
+                    "vertical-quiet-zone": "default",
+                    "width-to-height-ratio": 3.0
+                },
+                {
+                    "name":"DataMatrix",
+                    "names": ["ISO/IEC 16022:2000(E)"],
+                    "code": "datamatrix",
+                    "module-width": 0.352777,
+                    "quiet-zone": {
+                        "enabled": true,
+                        "text": 1
+                    },
+                    "shape": "force-none",
+                    "min-symbol-size": 1,
+                    "max-symbol-size": 2
+                }
+            ]
+        }
+    ]
+}

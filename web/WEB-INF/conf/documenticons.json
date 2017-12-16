@@ -1,0 +1,21 @@
+{
+    "name": "Document content type icons",
+    "icons": [
+        {"name":"spreadsheet", "icon":"file-excel-o","types":[
+            "application/vnd.ms-excel",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/vnd.ms-excel"
+            ]},
+        {"name":"pdf", "icon":"file-pdf-o","types":["application/force-download"]},
+        {"name":"sound", "icon":"file-sound-o","types":["audio/mpeg"]},
+        {"name":"textprocessor", "icon":"file-word-o","types":[
+            "application/vnd.oasis.opendocument.text",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            ]},
+        {"name":"archive", "icon":"file-archive-o","types":["application/rar","application/zip"]},
+        {"name":"image", "icon":"file-image-o","types":["image/gif","image/jpeg","image/png"]},
+        {"name":"text", "icon":"file-text-o","types":["text/plain"]},
+        {"name":"video", "icon":"file-video-o","types":[""]},
+        {"name":"other", "icon":"file-o","types":[]}
+    ]
+}

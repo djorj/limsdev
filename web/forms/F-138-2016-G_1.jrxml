@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="answer1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="01b9f52b-e5e9-4de0-a21c-b13540109bde">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="registrationnumber" class="java.lang.String"/>
+	<parameter name="regdate" class="java.lang.String"/>
+	<parameter name="sampletype" class="java.lang.String"/>
+	<parameter name="collectiondate" class="java.lang.String"/>
+	<parameter name="labtest" class="java.lang.String"/>
+	<parameter name="sampleemaunt" class="java.lang.String"/>
+	<parameter name="inst2" class="java.lang.String"/>
+	<parameter name="inst6" class="java.lang.String"/>
+	<parameter name="fieldid" class="java.lang.String"/>
+	<parameter name="bringer" class="java.lang.String"/>
+	<parameter name="stamp" class="java.lang.String"/>
+	<parameter name="anamnesis" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select
+i.barcode, c.name
+
+from
+contractsampleitem i left join (select l.name, r.contractsampleitemid from sampleitemreseach r, labtest l where r.labtestid = l.labtestid) c on i.contractsampleitemid = c.contractsampleitemid, contractsampletype t, sampletype s
+where
+i.contractsampletypeid = t.contractsampletypeid and t.sampletypeid = s.sampletypeid and i.parentid = $P{registrationnumber}::bigint]]>
+	</queryString>
+	<field name="barcode" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="385" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="1" y="114" width="554" height="31" forecolor="#000000" backcolor="#FFFFFF" uuid="237f959c-a85c-46e8-8532-9135a6ba7f8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="DejaVu Serif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ცხოველთა დაავადებების დიაგნოსტიკის დეპარტამენტი]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="89" height="84" uuid="9a43e59b-e3e7-4572-b7ba-53ddde859569"/>
+				<imageExpression><![CDATA["../img/logos/lma_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="90" y="0" width="350" height="64" uuid="6697041a-9c96-45f2-91a1-be0ac0a2330e"/>
+				<box topPadding="0">
+					<topPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[სსიპ საქართველოს სოფლის მეურნეობის სამინისტროს ლაბორატორია]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="64" width="350" height="20" uuid="43f06c77-3694-47e8-9a03-50efacd3171b"/>
+				<box>
+					<topPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ქ. თბილისი. ვასო გოძიაშვილის ქ. N49 +995 32 2 530968   www.lma gov.ge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="440" y="64" width="115" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="b845a043-df81-40ce-ab32-ff396fafd961"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="DejaVu Serif" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ვერსია: 07]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="84" width="550" height="30" uuid="a0ad045d-b2e5-4bbd-839e-d8ffd150837e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ნიმუშის გადაცემის შიდა ფორმა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="1" width="115" height="20" uuid="bbfa0658-1a6b-4fb0-8c24-aadbd469ee70"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[დამტკიცებულია]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="20" width="115" height="25" uuid="5621fb3c-ece8-41f7-ad6e-cc77e455e359"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[საიდენტიფიკაციო #: 
+F-001-2016-G]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="45" width="115" height="20" uuid="156bbd5b-70d2-487c-96f5-43e37172d16e"/>
+				<box>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="true"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<text><![CDATA[თარიღი: 07.10.2016]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="158" width="191" height="20" uuid="a6c10a43-06ce-4610-a778-7fa7009df411"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[რეგისტრაციის #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="178" width="191" height="23" uuid="45e0fa2d-a15b-43ab-98de-5f47a97aff9f"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მასალის/ნიმუშის მიღების თარიღი		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="203" width="190" height="22" uuid="d471676b-7adf-4132-8b48-c78a3c6259c3"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მასალის/ნიმუშის ტიპი	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="360" width="191" height="24" uuid="2ee715d3-373c-4d29-b26f-bf4cc50abd7d"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მიღებულია გამოსაცდელად:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="247" width="191" height="20" uuid="63560664-f896-45d9-8b6d-a3640dafd4e0"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მასალა/ნიმუშის რაოდენობა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="1" y="225" width="191" height="22" forecolor="#000000" backcolor="#FFFFFF" uuid="834d4fe4-dc15-4782-8abb-86d0a5abe4ca"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="DejaVu Serif" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[მასალის/ნიმუშის აღების თარიღი]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="192" y="158" width="132" height="22" uuid="4c63f0b7-d953-4538-82bc-8ed3c5ab0d95"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{registrationnumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="180" width="363" height="20" uuid="d2bc2126-2afd-40ef-8ebd-39c3938d437e"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{regdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="204" width="363" height="20" uuid="26cee387-721d-4f92-9be7-690f947844b5"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sampletype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="226" width="363" height="20" uuid="c902b95b-2c54-44c8-a365-718b7741060a"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{collectiondate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="247" width="362" height="20" uuid="f8aa4f59-4e4f-4478-a2d8-d9d9c9b13932"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sampleemaunt}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="407" y="158" width="148" height="22" uuid="be7b393f-a6ad-4504-bb48-7a6a1e98cf2b"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="bottom">
+					<jr:codeExpression><![CDATA[$P{registrationnumber}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<line>
+				<reportElement x="0" y="384" width="555" height="1" uuid="b8584d70-83f9-41d8-bb4c-6c49b63297ab"/>
+			</line>
+			<textField>
+				<reportElement x="324" y="158" width="83" height="22" uuid="5a077bb2-b5d6-472b-a086-c0f62399fe38"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fieldid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="298" width="362" height="20" uuid="23342a75-6384-410b-adbf-163728ebc1bd"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bringer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="265" width="193" height="32" uuid="bbd9c4ae-96e8-44ac-8f48-03573e7230dd"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მასალა/ნიმუში რა სახითაა და ვის მიერ არის გადმოგზავნილი	]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="267" width="362" height="30" uuid="6b5fa358-e00c-4958-8d71-1080125c471c"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{stamp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="318" width="362" height="20" uuid="644ab464-3220-4d88-9aa1-ef1334b7064a"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{anamnesis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="297" width="193" height="20" uuid="95ebce43-3827-4ced-9b8b-5ba9ff92be53"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მასალა/ნიმუშის შემომტანი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="317" width="193" height="20" uuid="aa783778-034f-40ce-9687-3358d4a4e74b"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ანამნეზი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="339" width="193" height="20" uuid="d5bd0953-5b20-43df-a2cf-56965db86b0b"/>
+				<textElement>
+					<font fontName="DejaVu Serif" isBold="false"/>
+				</textElement>
+				<text><![CDATA[მისამართი]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="193" y="340" width="362" height="20" uuid="1cbc2dcd-d7c7-42db-a643-4213bd0e3f3c"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="39">
+			<textField>
+				<reportElement x="1" y="0" width="388" height="36" uuid="416fb8a3-3c38-49cd-8f66-e33db5d5ced3"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="389" y="0" width="166" height="36" uuid="87376c54-0d7b-4560-a134-f9825c114ae0"/>
+				<jr:Code128 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" textPosition="bottom">
+					<jr:codeExpression><![CDATA[$F{barcode}]]></jr:codeExpression>
+				</jr:Code128>
+			</componentElement>
+			<line>
+				<reportElement x="0" y="36" width="555" height="1" uuid="c5078845-beca-49ed-b3cc-c5ba63d0a0b2"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="50">
+			<staticText>
+				<reportElement x="1" y="5" width="554" height="45" uuid="1e5921e2-d59a-4a79-b66a-006572c02847"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<text><![CDATA[ნიმუშების რეგისტრაციის და სტატისტიკური დამუშავების განყოფილება]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

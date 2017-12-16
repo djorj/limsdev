@@ -1,0 +1,9 @@
+{
+    "name": "barcode",
+    "units": "inch",
+    "barheight": 8,
+    "width": 1.5,
+    "height": 0.5,
+    "fontsize": 7,
+    "notext": true
+}

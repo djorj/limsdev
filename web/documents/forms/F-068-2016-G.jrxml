@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="F-001-2016-G" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="600d5f68-e6e7-40c9-ab8a-c9ddad7c1e84">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String">
+		<parameterDescription><![CDATA[შინაარსი]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter2" class="java.util.Date">
+		<parameterDescription><![CDATA[მასალის /ნიმუშის მიღების თარიღი]]></parameterDescription>
+	</parameter>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="597" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="141" uuid="1b6e16e3-db14-4db9-ab02-9958dc8798e7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="0" width="144" height="35" uuid="5546e383-bb7c-4630-b67d-5bf82647344b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="35" width="144" height="35" uuid="62cdd6e8-4eb0-46ed-9963-2b3d5ebf2d4d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="71" width="144" height="35" uuid="a933df03-b700-4054-9621-21078c64a64c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="106" width="144" height="35" uuid="613c0ce1-880e-4b60-af28-92b7364975f5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="106" width="411" height="35" uuid="9ddd75f0-017a-46aa-ab01-bdd7c2a39873"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="411" y="36" width="144" height="35" uuid="4c65da8e-b3f3-424a-8f90-551655701e7b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[საიდენტიფიკაციო #
+F-068-2016-G]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="1" width="290" height="90" uuid="21fd6add-e7f3-41bd-84a1-a27772bae43f"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[სსიპ საქართველოს სოფლის მეურნეობის
+სამინისტროს ლაბორატორია]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="1" width="120" height="90" uuid="e17af0a2-ac0d-4041-a011-a98392e45a7e"/>
+				<imageExpression><![CDATA["/home/djorj/NetBeansProjects/lims/web/documents/logos/lma.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="141" width="554" height="40" uuid="73d7759c-fc0b-4107-a0d7-71039464d372"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="18" isBold="true"/>
+					<paragraph spacingBefore="5"/>
+				</textElement>
+				<text><![CDATA[აქტი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="70" width="144" height="35" uuid="8f7f93e2-e365-49fb-bc9d-e1a62938523c"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[თარიღი:
+07.10.2016]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="106" width="144" height="35" uuid="17a2d48d-3534-4fcf-9d7c-92c7178dbb37"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[ვერსია 02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="411" height="35" uuid="e0f1e025-4613-4672-b0b9-bc04111f3232"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[ქ. თბილისი ვასო გოძიაშვილის ქ. #49.   +995 32 2 530968
+www.lma.gov.ge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="144" height="35" uuid="2b4c03c7-7bb4-46fb-a5fb-bf54c3c4e893"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[დამტკიცებულია]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="539" width="555" height="26" uuid="471d2316-1983-4ef3-a602-b54ac4483038"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[აქტის სისწორეს ვადასტურებთ ხელმოწერით:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="220" width="554" height="319" uuid="79f41a13-ec6d-46b7-a680-24dac360465b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="183" width="144" height="20" uuid="d137f547-d9ec-4487-8499-584cca615695"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{parameter2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="211" y="0" width="80" height="20" uuid="3f4f66db-d5c5-4e3c-b777-ec70e230be02"/>
+				<textElement textAlignment="Right">
+					<paragraph spacingBefore="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="291" y="0" width="40" height="20" uuid="7f8cea10-1354-48c0-ad3e-57535c17618b"/>
+				<textElement>
+					<paragraph spacingBefore="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

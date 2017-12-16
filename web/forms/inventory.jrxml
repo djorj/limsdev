@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inventory" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="63e36f7a-4937-4a4b-a794-ce7cff85819d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="invdate" class="java.lang.String"/>
+	<parameter name="pers0" class="java.lang.String"/>
+	<parameter name="pers1" class="java.lang.String"/>
+	<parameter name="pers2" class="java.lang.String"/>
+	<parameter name="pers3" class="java.lang.String"/>
+	<parameter name="pers4" class="java.lang.String"/>
+	<parameter name="headertext" class="java.lang.String"/>
+	<parameter name="id" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     v_inventory."accountname" AS v_inventory_accountname,
+     v_inventory."code" AS v_inventory_code,
+     v_inventory."compnum" AS v_inventory_compnum,
+     v_inventory."invnumber" AS v_inventory_invnumber,
+     v_inventory."productname" AS v_inventory_productname,
+     v_inventory."unitname" AS v_inventory_unitname,
+     v_inventory."price" AS v_inventory_price,
+     v_inventory."realamount" AS v_inventory_realamount,
+     v_inventory."realprice" AS v_inventory_realprice,
+     v_inventory."amount" AS v_inventory_amount,
+     v_inventory."accprice" AS v_inventory_accprice,
+     v_inventory."lessamount" AS v_inventory_lessamount,
+     v_inventory."lessprice" AS v_inventory_lessprice,
+     v_inventory."moreamount" AS v_inventory_moreamount,
+     v_inventory."moreprice" AS v_inventory_moreprice,
+     v_inventory."note" AS v_inventory_note
+FROM
+     "public"."v_inventory" v_inventory
+WHERE
+	v_inventory."inventoryid" = $P{id}]]>
+	</queryString>
+	<field name="v_inventory_accountname" class="java.lang.String"/>
+	<field name="v_inventory_code" class="java.lang.String"/>
+	<field name="v_inventory_compnum" class="java.lang.Integer"/>
+	<field name="v_inventory_invnumber" class="java.lang.String"/>
+	<field name="v_inventory_productname" class="java.lang.String"/>
+	<field name="v_inventory_unitname" class="java.lang.String"/>
+	<field name="v_inventory_price" class="java.lang.Double"/>
+	<field name="v_inventory_realamount" class="java.lang.Double"/>
+	<field name="v_inventory_realprice" class="java.lang.Double"/>
+	<field name="v_inventory_amount" class="java.lang.Double"/>
+	<field name="v_inventory_accprice" class="java.lang.Double"/>
+	<field name="v_inventory_lessamount" class="java.lang.Double"/>
+	<field name="v_inventory_lessprice" class="java.lang.Double"/>
+	<field name="v_inventory_moreamount" class="java.lang.Double"/>
+	<field name="v_inventory_moreprice" class="java.lang.Double"/>
+	<field name="v_inventory_note" class="java.lang.String"/>
+	<sortField name="v_inventory_accountname"/>
+	<group name="accountname">
+		<groupExpression><![CDATA[$F{v_inventory_accountname}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="0" y="0" width="803" height="20" uuid="dd799e74-f456-471d-9562-819c5a5920f7"/>
+					<box>
+						<bottomPen lineWidth="0.25"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{v_inventory_accountname}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="158" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="1" width="800" height="33" uuid="42cecf20-476c-49cd-af81-d994bbbbf71e"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="646" y="3" width="156" height="20" uuid="de53f235-b5a3-4326-8b57-8e2e7369c56a"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{invdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="35" width="800" height="20" uuid="caeca57b-8d4f-458c-8f91-9aa8e59896c0"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pers0}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="56" width="392" height="30" isPrintWhenDetailOverflows="true" uuid="4e9994c1-9ff1-4771-9b82-3a52b23002cf"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pers1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="86" width="392" height="30" isPrintWhenDetailOverflows="true" uuid="62cdad9f-a419-4f37-a2bd-675250396753"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pers2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="56" width="406" height="30" isPrintWhenDetailOverflows="true" uuid="05dea84a-e533-4b62-8848-928e57359dc7"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pers3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="86" width="406" height="30" isPrintWhenDetailOverflows="true" uuid="9bc9abaf-2604-40bd-8748-0a3b67a1c75f"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pers4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="117" width="799" height="40" uuid="e845daff-f63f-4b78-92b3-0cf9b7775052"/>
+				<textElement>
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{headertext}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="63" height="60" uuid="b8d364c6-4a27-48ac-bdb6-b7f7daf896c2"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ბარკოდი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="0" width="20" height="60" uuid="63b626a1-0717-4472-a50f-155bc9fbe17d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[კომპ N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="0" width="30" height="60" uuid="bc609b9c-0ff3-4cce-afd4-0a2d4e3e77cf"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ძვ. N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="152" height="60" uuid="b1d509ac-20e6-4286-b22c-a6ea3223f055"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ინვენტარის დასახელება]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="30" height="60" uuid="521c45a6-d491-4a1b-95f8-ada40886a831"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ერთ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="0" width="50" height="60" uuid="a6faa74f-d2d4-4537-801d-70c5fcd5dfb1"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ფასი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="40" width="34" height="20" uuid="9c157db3-37ba-4b30-9d76-02312a4fce50"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[რაოდ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="40" width="50" height="20" uuid="406a75c7-dded-4a56-b599-85e758eeb0d6"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[თანხა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="40" width="32" height="20" uuid="b59a795f-3411-452a-9ed4-222684142d93"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[რაოდ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="461" y="40" width="50" height="20" uuid="2229d7d6-cd74-4ce5-9c7e-f63802515315"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[თანხა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="40" width="34" height="20" uuid="fe83d227-36e7-4199-a4cb-74ed6bb68573"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[რაოდ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="545" y="40" width="50" height="20" uuid="07645306-e99c-4f84-b868-6033a18ba74c"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[თანხა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="40" width="34" height="20" uuid="4de91c5e-9ab6-4401-8cfa-76afc1e34486"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[რაოდ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="629" y="40" width="50" height="20" uuid="01453c6b-081e-4e5a-8eff-b40ac14fda6e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[თანხა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="679" y="0" width="123" height="60" uuid="54914ae1-dd77-4266-b4eb-1c92e03a9510"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[შენიშვნა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="0" width="84" height="40" uuid="496afd5d-dfb8-45d7-860d-4151232a992f"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ფაქტიურად სახეზეა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="82" height="40" uuid="4ffa8137-ff60-4466-934a-26b49adbb01e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ბუღალტრული აღრიცხვის მონაცემები]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="20" width="84" height="20" uuid="90cfe5a0-9342-43f9-9667-311752d02a6d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[დანაკლისი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="595" y="20" width="84" height="20" uuid="f1ca18f2-adb7-40c6-8104-dc67b81eefbb"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ზედმეტობა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="0" width="168" height="20" uuid="fc63f193-9951-4c2e-8cb1-a0db19f71129"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="DejaVu Serif" size="9"/>
+				</textElement>
+				<text><![CDATA[ინვენტარიზაციის შედეგი]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="63" height="20" uuid="2f069811-8191-4c29-9935-161bbac0d4bf"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="7"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_code}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="63" y="0" width="20" height="20" uuid="b9289e56-a47d-4fa3-b29c-8ebfa747e687"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_compnum}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="83" y="0" width="30" height="20" uuid="519d572f-4f49-43fd-b556-8cef0834df5d"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="7"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_invnumber}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="113" y="0" width="152" height="20" uuid="806d9fa7-34c7-4d4b-a7d2-692b1f33600c"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_productname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="265" y="0" width="30" height="20" uuid="fbeacc16-47ee-4533-a316-494934e1ddcd"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_unitname}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="295" y="0" width="50" height="20" uuid="856384f5-9a73-40ea-853c-26c8d2f7aac4"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_price}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="345" y="0" width="34" height="20" uuid="b55d51d2-214b-4534-8007-0b138772df01"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_realamount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="379" y="0" width="50" height="20" uuid="eb4ac5c0-015e-4f27-b3b8-a236aebca643"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_realprice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="427" y="0" width="34" height="20" uuid="d8575a67-0ede-48c3-a03b-563e2b52415a"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="461" y="0" width="50" height="20" uuid="e2b4171d-b652-404f-9a0d-eb76eb7e70f6"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_accprice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="511" y="0" width="34" height="20" uuid="e2232a25-043c-4ef8-a6b5-8debf53f6edb"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_lessamount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="545" y="0" width="50" height="20" uuid="2f7b095a-6055-4fd4-b700-03ee9e5ef196"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_lessprice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="595" y="0" width="34" height="20" uuid="2443d41a-c1d9-46a5-8705-815045a61c83"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_moreamount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0.00;-###0.00" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="629" y="0" width="50" height="20" uuid="ef41312a-a338-4b58-a9d6-cfedfa59b36e"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_moreprice}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="679" y="0" width="123" height="20" uuid="d9883d50-7f8c-440f-9cca-14c14d5e1991"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="8"/>
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{v_inventory_note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="584" height="106" uuid="15547856-2ba6-4d95-9879-139bd8059245"/>
+				<textElement markup="none">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<text><![CDATA[ამ საინვენტარიზაციო აღწერილობაში მოხსენებული ყველა ფასეულობა კომისიის მიერ შემოწმებულია ნატურით ჩემი თანდასწრებით და შეტანილია აღწერაში, რის შესახებაც კომისიასთან პრეტენზია არ მაქვს, ვიღებ პასუხისმგებლობას და ვადასტურებ ხელის მოწერით:
+
+
+აღწერილობაში მოხსენებული ფასეულობანი დაცულია, რაზედაც ხელს ვაწერთ კომისიის თავმჯდომარე:
+
+
+წევრები:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="585" y="34" width="217" height="1" uuid="46c3d461-27d8-4874-a00f-af788a17473c"/>
+			</line>
+			<line>
+				<reportElement x="586" y="73" width="217" height="1" uuid="4ef04dce-ed37-46a1-923d-4e6426399e2a"/>
+			</line>
+			<line>
+				<reportElement x="65" y="107" width="156" height="1" uuid="87b3a5f3-523f-4718-b62a-d925ca9db2f0"/>
+			</line>
+			<line>
+				<reportElement x="264" y="106" width="156" height="1" uuid="09fd37ae-4391-4b2f-843f-b6180b4c2a72"/>
+			</line>
+			<line>
+				<reportElement x="456" y="109" width="156" height="1" uuid="cd1364a1-0cda-4001-847d-32033f53f24d"/>
+			</line>
+			<line>
+				<reportElement x="646" y="108" width="156" height="1" uuid="b0642bf2-31a8-41e1-945a-73504559d902"/>
+			</line>
+			<textField>
+				<reportElement x="680" y="110" width="80" height="20" uuid="f4399e13-354a-48e5-92f8-632509553554"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA["გვერდი "+$V{PAGE_NUMBER}+" -"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="760" y="110" width="40" height="20" uuid="d52b394a-1b2e-4e7d-9238-f7724f9881a9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

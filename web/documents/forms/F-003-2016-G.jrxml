@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="F-001-2016-G" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="600d5f68-e6e7-40c9-ab8a-c9ddad7c1e84">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="2"/>
+	<parameter name="parameter1" class="java.lang.String">
+		<parameterDescription><![CDATA[რეგისტრაციის # და გაცემის თარიღი]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter2" class="java.util.Date">
+		<parameterDescription><![CDATA[მასალის/ნიმუშის მიღების თარიღი]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter3" class="java.lang.String">
+		<parameterDescription><![CDATA[ვის ეკუთვნის მასალა/ნიმუში]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter4" class="java.lang.String">
+		<parameterDescription><![CDATA[რა მასალა/ნიმუშია გადმოგზავნილი]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter5" class="java.lang.String">
+		<parameterDescription><![CDATA[მასალა/ნიმუშის რაოდენობა]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter6" class="java.lang.String">
+		<parameterDescription><![CDATA[რა სახითაა მიღებული მასალა/ნიმუში]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter7" class="java.lang.String">
+		<parameterDescription><![CDATA[მიღებულია გამოსაცდელად]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter8" class="java.lang.String">
+		<parameterDescription><![CDATA[ვის ეგზავნება პასუხი]]></parameterDescription>
+	</parameter>
+	<parameter name="parameter9" class="java.lang.String">
+		<parameterDescription><![CDATA[გამოცდის მეთოდი]]></parameterDescription>
+	</parameter>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="782" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="141" uuid="1b6e16e3-db14-4db9-ab02-9958dc8798e7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="0" width="144" height="35" uuid="5546e383-bb7c-4630-b67d-5bf82647344b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="35" width="144" height="35" uuid="62cdd6e8-4eb0-46ed-9963-2b3d5ebf2d4d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="71" width="144" height="35" uuid="a933df03-b700-4054-9621-21078c64a64c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="411" y="106" width="144" height="35" uuid="613c0ce1-880e-4b60-af28-92b7364975f5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="106" width="411" height="35" uuid="9ddd75f0-017a-46aa-ab01-bdd7c2a39873"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="411" y="36" width="144" height="35" uuid="4c65da8e-b3f3-424a-8f90-551655701e7b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[საიდენტიფიკაციო #
+F-138-2016-G]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="1" width="290" height="90" uuid="21fd6add-e7f3-41bd-84a1-a27772bae43f"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[სსიპ საქართველოს სოფლის მეურნეობის
+სამინისტროს ლაბორატორია]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="1" width="120" height="90" uuid="e17af0a2-ac0d-4041-a011-a98392e45a7e"/>
+				<imageExpression><![CDATA["/home/djorj/NetBeansProjects/lims/web/documents/logos/lma.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="150" width="555" height="40" uuid="73d7759c-fc0b-4107-a0d7-71039464d372"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+					<paragraph spacingBefore="5"/>
+				</textElement>
+				<text><![CDATA[გამოცდის ოქმი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="70" width="144" height="35" uuid="8f7f93e2-e365-49fb-bc9d-e1a62938523c"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[თარიღი:
+07.10.2016]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="106" width="144" height="35" uuid="17a2d48d-3534-4fcf-9d7c-92c7178dbb37"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[ვერსია 03]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="106" width="411" height="35" uuid="e0f1e025-4613-4672-b0b9-bc04111f3232"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[ქ. თბილისი ვასო გოძიაშვილის ქ. #49.   +995 32 2 530968
+www.lma.gov.ge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="0" width="144" height="35" uuid="2b4c03c7-7bb4-46fb-a5fb-bf54c3c4e893"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[დამტკიცებულია]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="190" width="260" height="30" uuid="041bdad5-f893-4476-be2e-c2e948bc3a8c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[რეგისტრაციის # და გაცემის თარიღი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="260" height="30" uuid="b4882572-d639-4cb4-9a4c-60df8fccfdf5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[მასალის /ნიმუშის მიღების თარიღი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="400" width="260" height="30" uuid="20170642-d0dc-4bdb-bf47-7c721ea8982e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[ვის ეგზავნება პასუხი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="340" width="260" height="30" uuid="08be2070-86cd-4ab4-9d11-327764950f35"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[რა სახითაა მიღებული მასალა/ნიმუში]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="310" width="260" height="30" uuid="ae6a31e6-59b4-4b96-9934-6cda6c54a0cc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[მასალის/ნიმუშის რაოდენობა]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="260" height="30" uuid="4900b5f2-c899-41db-8036-814670f420fc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[რა მასალა/ნიმუშია გადმოგზავნილი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="370" width="260" height="30" uuid="d111a8af-cb04-48cb-990a-0c94c8bd1ea3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[მიღებულია გამოსაცდელად]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="460" width="555" height="26" uuid="471d2316-1983-4ef3-a602-b54ac4483038"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+					<paragraph spacingBefore="4"/>
+				</textElement>
+				<text><![CDATA[გამოცდის შედეგი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="250" width="260" height="30" uuid="722077be-b705-44ab-a5d9-013ebb65b808"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[ვის ეკუთვნის მასალა/ნიმუში]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="430" width="260" height="30" uuid="ab0428d5-392c-4818-ae4f-b30b359117d5"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2"/>
+				</textElement>
+				<text><![CDATA[გამოცდის მეთოდი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="486" width="555" height="20" uuid="889335d0-6837-4952-a1d0-3028751da738"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[შენიშვნა:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="506" width="180" height="80" uuid="9ad23276-59d0-44c4-b2af-30f5e59d0de3"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="506" width="180" height="80" uuid="39dcbef1-34db-4bff-85c4-bc3dcc6a90d8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="506" width="180" height="50" uuid="7e11f886-f84b-4d96-a18d-3432f6cc6dd8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3"/>
+				</textElement>
+				<text><![CDATA[ცხოველთა დაავადებების
+დიაგნოსტიკის დეპარტამენტის
+უფროსი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="556" width="180" height="30" uuid="9dfb24a1-5879-4db1-9f5e-d46fc0919f45"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[/                            /]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="586" width="180" height="40" uuid="217092fb-1c1d-4f84-a7c6-2af3f0eaecfc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3"/>
+				</textElement>
+				<text><![CDATA[სურსათის კვლევის დეპარტამენტის
+უფროსი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="626" width="180" height="30" uuid="1fd178cc-2cf4-4715-b9d7-513f8c41a058"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[/                            /]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="656" width="180" height="50" uuid="4dc5ec48-c137-4e53-b4ba-df1a03f8b27b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3"/>
+				</textElement>
+				<text><![CDATA[მცენარეთა მავნე ორგანიზმების
+დიაგნოსტიკის დეპარტამენტის
+უფროსი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="706" width="180" height="30" uuid="346e89b4-6e43-4ed7-8b67-e568ad0c970a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[/                            /]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="586" width="180" height="70" uuid="5fe679f7-c0e9-4f71-9b28-0a8d97f3ffea"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[სსიპ საქართველოს სოფლის
+მეურნეობის სამინისტროს
+ლაბორატორიის დირექტორი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="586" width="180" height="70" uuid="8615086d-d585-4b2f-b38d-fb9e9e66f92f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[ნიმუშების რეგისტრაციის და
+სტატისტიკური დამუშავების
+განყოფილების უფროსი]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="656" width="180" height="50" uuid="29ff3cc8-e7c6-4bf2-bdfd-935e3d03c1bc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[/                            /]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="656" width="180" height="50" uuid="0cb3ef19-d20b-43ab-a0bf-032061508f8f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[/                            /]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="706" width="180" height="30" uuid="fb5be30b-0da4-49dc-8b8c-21c26c0bfb2e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="706" width="180" height="30" uuid="4cfe6dc9-4a2b-48bc-890e-d873ed3198ab"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="3" rightIndent="3" spacingBefore="3" spacingAfter="3"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="706" width="15" height="30" uuid="4c32ae8a-24d8-4c93-9027-f1557b8b33e0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="506" width="15" height="50" uuid="d4ac33c5-e0b2-4082-b255-cd24970645fd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[□]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="556" width="15" height="30" uuid="cc698d07-05f9-4697-aa08-70e919802d13"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="586" width="15" height="40" uuid="ee3220af-d217-4d69-b564-bb54b948bf5b"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[□]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="626" width="15" height="30" uuid="2da605fc-d235-4330-b773-900084f18585"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="656" width="15" height="50" uuid="060984be-26d6-4a04-9191-33f0d965228e"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[□]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="190" width="295" height="30" uuid="8455701d-94b4-4231-81a7-90359d32e754"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="DD.MM.YYYY">
+				<reportElement x="260" y="220" width="295" height="30" uuid="a3fa305d-b527-4bd9-92af-b71d7b673b45"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="250" width="295" height="30" uuid="01435898-972f-4006-bc70-17630ac23db1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="280" width="295" height="30" uuid="ea5a3759-c3f9-4d77-9074-0907668bbdcd"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="310" width="295" height="30" uuid="f50851af-8326-4504-be28-27208baec545"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="340" width="295" height="30" uuid="42ec2894-051b-4907-91e5-a9866f121314"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="370" width="295" height="30" uuid="ae0a0eb4-8278-4a3a-b725-27e407ba87f1"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="400" width="295" height="30" uuid="852ef234-f911-4f4f-a97b-f383f9be0e2f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="430" width="295" height="30" uuid="39039f67-d80b-4d8b-a56c-1452774986fc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter9}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="211" y="0" width="80" height="20" uuid="3f4f66db-d5c5-4e3c-b777-ec70e230be02"/>
+				<textElement textAlignment="Right">
+					<paragraph spacingBefore="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="291" y="0" width="40" height="20" uuid="7f8cea10-1354-48c0-ad3e-57535c17618b"/>
+				<textElement>
+					<paragraph spacingBefore="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+      <context-param>
+        <param-name>cval</param-name>
+        <param-value>lksahklahslkghlkasfh</param-value>
+      </context-param>
+      <context-param>
+        <param-name>cpass</param-name>
+        <param-value>35835798608782457945794579</param-value>
+      </context-param>
+      <context-param>
+        <param-name>cname</param-name>
+        <param-value>lk236kg6kllk3h6lk356y236y45</param-value>
+      </context-param>
+      <context-param>
+        <param-name>driver</param-name>
+        <param-value>org.postgresql.Driver</param-value>
+        <description>
+                    Database Connectivity Driver Name
+          </description>
+      </context-param>
+      <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:postgresql://localhost/lma</param-value>
+        <description>
+                    Database connection string
+          </description>
+      </context-param>
+      <context-param>
+        <param-name>user</param-name>
+        <param-value>lims</param-value>
+        <description>
+                    Application database user login
+          </description>
+      </context-param>
+      <context-param>
+        <param-name>pass</param-name>
+        <param-value>lims!</param-value>
+        <description>
+                    Application database user password
+          </description>
+      </context-param>
+    <session-config>
+        <session-timeout>
+            0
+        </session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>com.mysoft.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/readfile</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ImageToPDF</servlet-name>
+        <servlet-class>com.mysoft.ImageToPDF</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageToPDF</servlet-name>
+        <url-pattern>/getbcode</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BarcodeServlet</servlet-name>
+        <servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BarcodeErrorServlet</servlet-name>
+        <servlet-class>org.krysalis.barcode4j.webapp.BarcodeErrorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BarcodeServlet</servlet-name>
+        <url-pattern>/gensvg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BarcodeServlet</servlet-name>
+        <url-pattern>/genbc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BarcodeErrorServlet</servlet-name>
+        <url-pattern>/errsvg</url-pattern>
+    </servlet-mapping>
+</web-app>
